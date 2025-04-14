@@ -14,11 +14,9 @@
 ## Usage
 - Know the current weather information by searching for the right location.
 
-Thanks
-
-Hardi Rachh
-
-You can connect with me on:
+## Hi there! 👋
+I’m Hardi Rachh, an experienced Android developer who loves exploring new frameworks and tools.
+Always open to connect and collaborate, feel free to reach out to me on: 😊
 
 - LinkedIn : https://www.linkedin.com/in/hardi-r/
 - Medium : https://hardirachh.medium.com/
