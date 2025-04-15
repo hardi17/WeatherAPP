@@ -200,7 +200,7 @@ fun WeatherDetails(data: Weather) {
                     horizontalArrangement = Arrangement.SpaceAround
                 ) {
                     WeatherKeyVal("Wind", data.current.wind_mph + "mph")
-                    WeatherKeyVal("Gusts", data.current.gust_kph + "mph")
+                    WeatherKeyVal("Gusts", data.current.gust_mph + "mph")
                 }
                 Row(
                     modifier = Modifier.fillMaxWidth(),

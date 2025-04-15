@@ -20,25 +20,26 @@ class WeatherViewModel @Inject constructor(
     private val dispatcherProvider: DispatcherProvider
 ) : ViewModel() {
 
-    private val _uiState = MutableStateFlow<Uistate<Weather>>(Uistate.Error( null,"No data available"))
+    private val _uiState =
+        MutableStateFlow<Uistate<Weather>>(Uistate.Error(null, "No data available"))
 
     val uistate: StateFlow<Uistate<Weather>> = _uiState
 
 //    init {
 //        searchQuery("current location")
 //    }
-//
 
-    fun searchQuery(location : String){
+
+    fun searchQuery(location: String) {
         viewModelScope.launch(dispatcherProvider.main) {
             _uiState.value = Uistate.Loading
-           weatherRepository.getWeatherDetails(location)
-               .flowOn(dispatcherProvider.io)
-               .catch { e->
-                   _uiState.value = Uistate.Error(e)
-               }.collect{
-                   _uiState.value = Uistate.Success(it)
-               }
+            weatherRepository.getWeatherDetails(location)
+                .flowOn(dispatcherProvider.io)
+                .catch { e ->
+                    _uiState.value = Uistate.Error(e)
+                }.collect {
+                    _uiState.value = Uistate.Success(it)
+                }
         }
     }
 }
