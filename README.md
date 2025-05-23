@@ -12,9 +12,6 @@
 - Retrofit : Networking libraries
 - Testing : JUnit, Mockito & Turbine
 
-
-![Screenshot_20250415_110144](https://github.com/user-attachments/assets/02d766ce-6d1f-420a-8b93-358bd589caac)
-
 ## Usage
 - Know the current weather information by searching for the right location.
 
